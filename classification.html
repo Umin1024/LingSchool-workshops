@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/classification.css">
+    <title>分类失败 Classification Failure</title>
+</head>
+
+<body class="lang-en">
+    <nav>
+        <span class="nav-left">
+            <a href="index.html">Undatable</a> --
+            <a href="classification.html"><span class="zh">分类失败</span><span class="en">Classification Failure</span></a>
+        </span>
+        <button id="langToggle" onclick="toggleLang()">中文</button>
+    </nav>
+
+    <h1><span class="zh">分类失败</span><span class="en">Classification Failure</span></h1>
+    <br><br>
+
+    <intro class="bilingual">
+        <p class="zh">
+            分类的不可能是个古老的问题。福柯在《词与物》里借博尔赫斯那部荒诞的分类法早就指出过：任何秩序一旦被摊开，它的任意性也随之显形。但此刻我重提分类，并不是要做一场哲学考古。
+            处理分类，其实是在处理一个认知框架的问题——而 AI
+            对人的影响，恰恰最常发生在"判断"这一层。分类的本质，是界定人与信息的关系：它是个人内部的信息经验（记忆、知识系统、感受）与外部的信息结构（既有的分类法、笔记软件的文件夹、约定俗成的目录）之间的一场博弈。
+            <br><br>
+            但这样一个宏大而抽象的问题，如何在"人的尺度"上被实践、被经历，让人感受到其中具体的矛盾？我选择把个人笔记作为整个工作坊的立足点，从一条具体的、无法被归类的信息开始。通过这种日常经验，我们得以慢慢看清自己内部与外部的边界，也理解人为何会一点点把决策权让渡给
+            AI——而这种让渡，如何恰恰扎根在人自身的局限里
+        </p>
+        <p class="en">
+            The impossibility of classification is an old problem. In The Order of Things, by way of Borges's absurd
+            taxonomy, Foucault pointed this out long ago: once any order is laid out flat, its arbitrariness surfaces
+            along with it. But in raising classification again now, I am not after a piece of philosophical archaeology.
+            To deal with classification is to deal with a cognitive framework — and AI's influence on us most often
+            operates at the level of judgment. At its core, classification defines the relationship between a person and
+            information: it is a contest between one's internal experience of information (memory, systems of knowledge,
+            feeling) and the external structures of information (inherited taxonomies, the folders of a note-taking app,
+            conventional directories).
+            <br><br>
+            But how is a question this vast and abstract to be practiced, lived, and felt — in its concrete
+            contradictions — on a human scale? I take personal note-taking as the foothold of the entire workshop,
+            beginning from a single, concrete piece of information that refuses to be classified. Through this everyday
+            process, we come slowly to see the boundary between our inner and outer worlds, and to understand why a
+            person, little by little, hands their power of decision over to AI — and how that surrender is rooted
+            precisely in the limits of the human itself.
+        </p>
+    </intro>
+
+    <br>
+
+    <div class="textWeb-right" style="position: relative;">
+        <div class="textWeb-images" id="imageStripC">
+            <img src="/images/Classification.png" height="800" class="zoomable">
+            <img src="/images/cf-week-1.png" height="800" class="zoomable">
+            <img src="/images/cf-tea-room.png" height="800" class="zoomable">
+            <img src="/images/cf-templates.png" height="800" class="zoomable">
+        </div>
+        <p class="caption">
+            <span class="zh">P1 主页面 <br> P2 第一周 <br> P3 茶水间 <br> P4 个人笔记模版</span>
+            <span class="en">P1 Main Page <br> P2 Week 1 <br> P3 Tea Room <br> P4 Template</span>
+        </p>
+        <div class="img-counter" id="imgCounterC"></div>
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span id="lightbox-close">✕</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // 图片计数（classification 页面）
+        const stripC = document.getElementById('imageStripC');
+        const totalC = stripC.querySelectorAll('img').length;
+        document.getElementById('imgCounterC').textContent = totalC;
+        stripC.addEventListener('scroll', () => {
+            const imgs = stripC.querySelectorAll('img');
+            let current = 1;
+            imgs.forEach((img, i) => {
+                if (img.offsetLeft - stripC.scrollLeft < stripC.clientWidth / 2) current = i + 1;
+            });
+            document.getElementById('imgCounterC').textContent = current + ' / ' + totalC;
+        });
+    </script>
+
+    <script>
+        function toggleLang() {
+            const body = document.body;
+            const btn = document.getElementById('langToggle');
+            if (body.classList.contains('lang-en')) {
+                body.classList.replace('lang-en', 'lang-zh');
+                btn.textContent = 'EN';
+            } else {
+                body.classList.replace('lang-zh', 'lang-en');
+                btn.textContent = '中文';
+            }
+        }
+    </script>
+</body>
+
+</html>
