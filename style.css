@@ -202,6 +202,14 @@ h1 {
     line-height: 1;
 }
 
+.milanote-thumb {
+    cursor: alias;
+    transition: opacity 0.15s;
+}
+.milanote-thumb:hover {
+    opacity: 0.85;
+}
+
 .caption {
     font-size: 0.85rem;
     color: #555;
