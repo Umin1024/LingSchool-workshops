@@ -63,7 +63,7 @@ body {
     color: #333;
 }
 
-/* 链接内的 .en/.zh 不要覆盖链接颜色 */
+
 a .en,
 a .zh {
     color: inherit;
@@ -91,7 +91,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    /* 突破 body 的 padding，延伸到视口两端 */
+
     width: 100vw;
     margin-left: -3rem;
     margin-right: -1.5rem;
@@ -202,10 +202,19 @@ h1 {
     line-height: 1;
 }
 
+footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(90, 90, 90, 0.2);
+    font-size: 0.8rem;
+    color: #878787;
+}
+
 .milanote-thumb {
     cursor: alias;
     transition: opacity 0.15s;
 }
+
 .milanote-thumb:hover {
     opacity: 0.85;
 }
