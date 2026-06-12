@@ -226,3 +226,37 @@ footer {
     padding-left: 0.75rem;
     margin-top: 1.5rem;
 }
+
+.media-block {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.media-block audio {
+    width: 100%;
+    max-width: 480px;
+}
+
+.media-block video {
+    max-width: 100%;
+    display: block;
+}
+
+.audio-card {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.audio-waveform {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.audio-card audio {
+    width: 100%;
+}
