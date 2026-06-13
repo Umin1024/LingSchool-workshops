@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>About — Yuemin Huang</title>
+</head>
+
+<body class="lang-en">
+    <nav>
+        <span class="nav-left">
+            <a href="index.html"><span class="zh">不可数据</span><span class="en">Undatable</span></a> --
+            <a href="classification.html"><span class="zh">分类失败</span><span class="en">Classification Failure</span></a>
+            --
+            <a href="about.html"><span class="zh">关于</span><span class="en">About</span></a>
+        </span>
+        <button id="langToggle" onclick="toggleLang()">中文</button>
+    </nav>
+
+    <h1><span class="zh">关于</span><span class="en">About</span></h1>
+    <br><br>
+
+    <div class="bilingual">
+        <p class="zh">
+            <a
+                href="https://www.yueminh.com/">黄越敏</a>是一位多媒体艺术家与艺术教育者。她本科毕业于华东师范大学公共艺术专业，后在芝加哥艺术学院（SAIC）获得艺术与技术研究方向艺术硕士学位，目前任职于华东师范大学美术学院，担任讲师。她是艺术游戏团体
+            [[rect*]]repair
+            的成员，该团体从事实验性游戏创作、社区活动与公共介入。她的个人创作关注媒介的形式条件与基础设施的物质性——探索它如何塑造并规训社会生活。她以游戏和互动媒体为方法，持续追问感知与行动之间的裂缝。
+        </p>
+        <p class="en">
+            <a href="https://www.yueminh.com/">Yuemin Huang</a> is a multimedia artist and art educator. She holds a BA
+            in Public Art
+            from East China Normal University and an MFA in Art and Technology Studies from the School of the Art
+            Institute of Chicago, and currently teaches as a lecturer in the Department of Art and Design at East China
+            Normal University. She is a member of the art-game collective [[rect*]]repair, which makes and facilitates
+            experimental games, community events, and public interventions. Her own practice concerns the formal
+            conditions of media and the materiality of infrastructure — how it shapes and conditions social life.
+            Working through games and interactive media, she keeps probing the gap between how we perceive and how we
+            act.
+        </p>
+    </div>
+
+    <footer>
+        <p class="zh">作者使用了 Claude（Anthropic）辅助文字润色与翻译。所有原创写作、分析及设计决策均由作者本人完成，作者对本作品的准确性与完整性承担全部责任。</p>
+        <p class="en">The author used Claude (Anthropic) to assist with language editing and translation. All original
+            writing, analysis, and design decisions are the author's own. The author takes full responsibility for the
+            accuracy and integrity of the work.</p>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const body = document.body;
+            const btn = document.getElementById('langToggle');
+            if (body.classList.contains('lang-en')) {
+                body.classList.replace('lang-en', 'lang-zh');
+                btn.textContent = 'EN';
+            } else {
+                body.classList.replace('lang-zh', 'lang-en');
+                btn.textContent = '中文';
+            }
+        }
+    </script>
+</body>
+
+</html>
